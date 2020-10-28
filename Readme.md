@@ -23,3 +23,7 @@ by clicking the Copy To Clipboard button.
 
 Paste this connection string in your application to access the Queue.
 
+------------------
+Currently, a build problem may occur because the nuget packages are not archived to github
+and the paths to the packages in the .proj file are possibly invalid for you.
+
