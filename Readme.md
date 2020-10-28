@@ -32,7 +32,9 @@ or C:\Users\yourname\.nuget\packages\
 
 For now, the fix is to reinstall all NuGet packages with this command in the Tools / NuGet Package Manager Console:
 
----- Update-Package -reinstall
+.... Update-Package -reinstall
+
+(thanks go to SO answer: https://stackoverflow.com/a/42778916)
 
 
 
