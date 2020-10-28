@@ -26,4 +26,13 @@ Paste this connection string in your application to access the Queue.
 ------------------
 Currently, a build problem may occur because the nuget packages are not archived to github
 and the paths to the packages in the .proj file are possibly invalid for you.
+The .Proj file references local folder ../packages/ for the NuGet packages, 
+instead of C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+or C:\Users\yourname\.nuget\packages\
+
+For now, the fix is to reinstall all NuGet packages with this command in the Tools / NuGet Package Manager Console:
+
+---- Update-Package -reinstall
+
+
 
