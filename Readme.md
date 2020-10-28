@@ -10,14 +10,14 @@ than in a console app that nobody uses for real work?
 
 You will need a connection string to access an Azure queue.
 On the Azure portal, when viewing the queue details,
-click under *Settings* on *Shared Access Policies*.
-There, *(+)add* a policy if none yet exists.
+click under **Settings** on **Shared Access Policies**.
+There, **(+)add** a policy if none yet exists.
 Open the policy by clicking on it to view the SAS Policy.
 Copy the **Primary Connection String** in the format like:
 
-.........
+```
 Endpoint=sb://[yourqueuename].servicebus.windows.net/;SharedAccessKeyName=mypolicy;SharedAccessKey=[yourqueuekey]+EU20YgOVm5Eez+7E2rQ8WmTLyf0=;EntityPath=queue1
-.........
+```
 
 by clicking the Copy To Clipboard button.
 
