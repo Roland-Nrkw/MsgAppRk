@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button_Receive = new System.Windows.Forms.Button();
@@ -76,6 +77,8 @@
             // 
             // button_Clear
             // 
+            this.button_Clear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Clear.Location = new System.Drawing.Point(296, 241);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(75, 23);
@@ -173,8 +176,9 @@
             this.Controls.Add(this.richTextBox_Msgs);
             this.Controls.Add(this.textBox_ConnectionString);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Message App";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Nr_Msgs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
