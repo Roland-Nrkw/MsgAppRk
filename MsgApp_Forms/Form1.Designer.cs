@@ -77,8 +77,7 @@
             // 
             // button_Clear
             // 
-            this.button_Clear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Clear.Location = new System.Drawing.Point(296, 241);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(75, 23);
@@ -135,7 +134,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox_Msgs.Location = new System.Drawing.Point(11, 270);
-            this.richTextBox_Msgs.MinimumSize = new System.Drawing.Size(360, 161);
             this.richTextBox_Msgs.Name = "richTextBox_Msgs";
             this.richTextBox_Msgs.Size = new System.Drawing.Size(360, 161);
             this.richTextBox_Msgs.TabIndex = 14;
@@ -177,6 +175,7 @@
             this.Controls.Add(this.textBox_ConnectionString);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(402, 489);
             this.Name = "Form1";
             this.Text = "Message App";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Nr_Msgs)).EndInit();

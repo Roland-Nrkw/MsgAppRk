@@ -41,6 +41,32 @@ namespace Msg_Forms
             numericUpDown_Nr_Msgs.Value = 5;
         }
 
+        /// <summary>
+        /// Return True on successfully opening the service bus queue
+        /// </summary>
+        /// <returns></returns>
+        private bool Open_ServicebusQueue()
+        {
+            bool OpenOk = false;
+            try
+            {
+                _queueClient = new QueueClient(textBox_ConnectionString.Text, textBox_Queue.Text);
+                OpenOk = true;
+            }
+            catch(Exception e)
+            {
+                Msg($"Exception: {e.Message}");
+                OpenOk = false;
+            }
+            if (_queueClient == null)
+            {
+                Msg("Error: Servicebus Queue could not be opened.");
+                Msg("did you enter a valid sb and queue?");
+                OpenOk = false;
+            }
+            return OpenOk;
+        }
+
         private void button_Clear_Click(object sender, EventArgs e)
         {
             richTextBox_Msgs.Text = "";
@@ -48,14 +74,14 @@ namespace Msg_Forms
 
         private void button_Send_Click(object sender, EventArgs e)
         {
-            _queueClient = new QueueClient(textBox_ConnectionString.Text, textBox_Queue.Text);
-            SendAsync().GetAwaiter().GetResult();
+            if (Open_ServicebusQueue())
+                SendAsync().GetAwaiter().GetResult();
         }
 
         private void button_Receive_Click(object sender, EventArgs e)
         {
-            _queueClient = new QueueClient(textBox_ConnectionString.Text, textBox_Queue.Text);
-            ReceiveAsync().GetAwaiter().GetResult();
+            if (Open_ServicebusQueue())
+                ReceiveAsync().GetAwaiter().GetResult();
         }
 
         async Task SendAsync()
