@@ -38,3 +38,15 @@ Update-Package -reinstall
 (thanks go to SO answer: https://stackoverflow.com/a/42778916)
 
 
+--------------------
+Bugs:
+
+There seems to be a problem because only one message is sent. 
+This may be because of a coding error with task/async, 
+with which I am not very experienced.
+
+This might also show that a console app is not a very good example format,
+as your final code in a real project might be more like in a Forms project.
+A console app is the most simple code, but Einstein said about the KISS principle:
+Keep It as Simple as possible, but not Simpler.
+I take this as making it not simpler than a Forms project.
